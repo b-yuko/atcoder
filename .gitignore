@@ -6,6 +6,7 @@
 .gradle/
 build/
 dist/
+.kotlin/
 
 # Node.js (TypeScript用)
 node_modules/

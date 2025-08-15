@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings - AtCoder用に調整
+    "module": "commonjs",  // Node.js環境なのでcommonjs
+    "target": "es2020",    // 安定したターゲット
+    "types": ["node", "jest"],  // Node.js と Jest の型定義
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options（AtCoder用に緩和）
+    // "noUncheckedIndexedAccess": true,  // 配列アクセスで厳しすぎるのでコメントアウト
+    // "exactOptionalPropertyTypes": true,  // 競技プログラミングでは厳しすぎる
+
+    // Style Options - 競技プログラミング用に有効化
+    "noImplicitReturns": true,
+    // "noImplicitOverride": true,  // AtCoderでは不要
+    // "noUnusedLocals": true,      // テンプレート使用時に邪魔になるのでコメントアウト
+    // "noUnusedParameters": true, // 同上
+    "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,  // 配列操作で邪魔になる
+
+    // Recommended Options
+    "strict": true,
+    // "jsx": "react-jsx",  // AtCoderでは不要
+    // "verbatimModuleSyntax": true,  // 競技プログラミングでは不要
+    "isolatedModules": true,
+    // "noUncheckedSideEffectImports": true,  // 競技プログラミングでは不要
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+
+    // AtCoder用追加設定
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
