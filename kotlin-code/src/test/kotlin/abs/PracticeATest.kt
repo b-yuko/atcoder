@@ -27,6 +27,34 @@ class PracticeATest {
     }
 
     @Test
+    fun debugSimpleCase1() {
+        val input = "1\n2 3\ntest"
+        val expected = "6 test"
+
+        TestUtils.quickDebug(
+            input = input,
+            expected = expected,
+        ) { practiceA() }
+
+        val result = TestUtils.runWithInput(input) { practiceA() }
+        assertEquals(expected, result.trim())
+    }
+
+    @Test
+    fun debugSimpleCase2() {
+        val input = "72\n128 256\nmyonmyon"
+        val expected = "456 myonmyon"
+
+        TestUtils.quickDebug(
+            input = input,
+            expected = expected,
+        ) { practiceA() }
+
+        val result = TestUtils.runWithInput(input) { practiceA() }
+        assertEquals(expected, result.trim())
+    }
+
+    @Test
     fun testAllCases() {
         val testCases =
             listOf(
