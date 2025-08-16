@@ -53,10 +53,9 @@ class PracticeATest {
             listOf(
                 testCase("1\n2 3\ntest", "6 test"),
                 testCase("72\n128 256\nmyonmyon", "456 myonmyon"),
-                testCase("0\n0 0\nhello", "0 hello"), // 仮に失敗するケース
+                testCase("0\n0 0\nhello", "0 hello"),
             )
 
-        // この関数を使うと失敗時に詳細が見える
         TestUtils.assertTestCases(testCases) { practiceA() }
     }
 }
