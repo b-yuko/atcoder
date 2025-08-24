@@ -34,6 +34,7 @@ val s = readln()
 // 複数行の入力例
 val n = readln().toInt()
 val items = (1..n).map { readln().toInt() }
+val items = List(n) { readln().toInt() }   // ひとつ上と同じ結果を得られる
 
 ===========================================
 よく使う処理パターン
@@ -56,6 +57,11 @@ s.forEach { char ->
 
 // 条件に一致する要素をカウント
 val count = nums.count { it > 0 }
+
+// 配列から重複を取り除く
+val list = listOf(3, 1, 2, 3, 2)
+val set = list.toSet()   // [3, 1, 2] （順序保証なし、Set型を返す）
+val result = list.distinct()   // [3, 1, 2] （順序保証あり、新しいリストを返す）
 
 ===========================================
 基本テンプレート
